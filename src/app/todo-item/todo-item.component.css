@@ -1,0 +1,13 @@
+.todo-item{
+    /* display: flex; /*ทำให้ข้อมูลอยู่บรรทัดเดียวกัน เช่น ไอคอนตามด้วยตัวอักษร*/
+    /* align-items: center; */ 
+    cursor: pointer; /*เป็นรูปนี้เวลาเอาเมาส์ไปชี้*/
+    font-size: 18px;
+    padding: 35px 15px;
+    border-bottom: 1px solid #f2f3f5;
+    
+}
+
+.todo-item .check-box{
+      margin-right: 20px;
+}

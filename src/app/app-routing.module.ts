@@ -1,7 +1,13 @@
-import { NgModule } from '@angular/core';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TodosComponent } from './todos/todos.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+//  { path: '', component: TodosComponent }  
+{path:'employees', component: EmployeeListComponent},
+{path:'', redirectTo: 'employees', pathMatch: 'full'} //router = http://localhost:4200/ ให้เอา employees มาเติมเลยจะเท่ากับ http://localhost:4200/employees
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

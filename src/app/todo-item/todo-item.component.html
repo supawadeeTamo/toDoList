@@ -1,0 +1,31 @@
+<div class="todo-item" (click)="onTodoClicked()" [class.completed]="todo.completed">
+    <!-- <div class="check-box">
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+    </div> -->
+    <div class="row">
+        <div class="todo-text">
+            {{todo.text}}
+        </div>
+        <div style="width:100%;text-align:right;">
+            <div class="todo-controls" (click)="$event.stopPropagation()">
+                <button type="submit" class="btn btn-primary" style="margin-right: 10px;" (click)="onEditClicked()">
+                    Edit
+                </button>
+                <button type="submit" class="btn btn-danger" (click)="onDeleteClicked()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- <div class="todo-item">
+    <div class="check-box">
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+    </div>
+    <div class="todo-text">
+        information 2
+    </div>
+</div> -->
