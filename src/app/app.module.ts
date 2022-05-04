@@ -11,14 +11,16 @@ import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.com
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     TodosComponent,
     TodoItemComponent,
     EditTodoDialogComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    CreateEmployeeComponent
    ],
   imports: [
     BrowserModule,
