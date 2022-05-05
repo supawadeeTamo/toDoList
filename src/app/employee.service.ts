@@ -10,9 +10,15 @@ import { Observable } from 'rxjs';
 export class EmployeeService {
 
   private baseURL = "http://localhost:4200/api/v1/employees";
+  private createURL = "http://localhost:4200/api/v1/create/employees";
   constructor(private httpClient: HttpClient) { 
   }
   getEmployeeList(): Observable<Employee[]>{
       return this.httpClient.get<Employee[]>(`${this.baseURL}`)
   }
+
+  createEmployee(employee: Employee): Observable<any>{
+    return this.httpClient.post(`${this.createURL}`, employee);
+  }
+
 }
