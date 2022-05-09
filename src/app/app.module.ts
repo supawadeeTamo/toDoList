@@ -13,10 +13,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
     TodosComponent,
     TodoItemComponent,
@@ -24,7 +25,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     EmployeeListComponent,
     CreateEmployeeComponent,
       UpdateEmployeeComponent,
-    
+      EmployeeDetailsComponent
    ],
   imports: [
     BrowserModule,
