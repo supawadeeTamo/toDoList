@@ -1,4 +1,21 @@
 <h2> Employee List</h2>
+<br>
+<p>Search for employee</p>
+<label>First Name :
+  <input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="getEmployeesName()">
+</label>
+&nbsp;
+<label>Last Name :
+  <input type="text" [(ngModel)]="filters.keywordLastName" name="keyword" (input)="getEmployeesLastName()">
+</label>
+&nbsp;
+<label>Email :
+  <input type="text" [(ngModel)]="filters.keywordEmail" name="keyword" (input)="getEmployeesEmail()">
+</label>
+&nbsp;
+<button class="btn btn-dark" (click)="Clear()">Clear</button>
+<br>
+<br>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -13,7 +30,7 @@
       <td>{{employee.lastName}}</td>
       <td>{{employee.emailId}}</td>
       <td>
-        <button (click)="updateEmployee(employee.id)" class="btn btn-info">
+        <button (click)="updateEmployee(employee.id)" class="btn btn-primary">
           Update
         </button>
         &nbsp;

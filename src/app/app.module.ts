@@ -14,10 +14,11 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { SearchComponentComponent } from './search-component/search-component.component';
 
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
     TodosComponent,
     TodoItemComponent,
@@ -25,7 +26,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     EmployeeListComponent,
     CreateEmployeeComponent,
       UpdateEmployeeComponent,
-      EmployeeDetailsComponent
+      EmployeeDetailsComponent,
+      SearchComponentComponent
    ],
   imports: [
     BrowserModule,
