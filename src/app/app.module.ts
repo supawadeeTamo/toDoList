@@ -15,8 +15,9 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
-
-
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [						
     AppComponent,
@@ -35,7 +36,10 @@ import { SearchComponentComponent } from './search-component/search-component.co
     FormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MessagesModule,
+    MessageModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

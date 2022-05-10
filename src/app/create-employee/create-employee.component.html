@@ -4,12 +4,22 @@
 
   <div class="form-group">
     <label> First Name </label>
-    <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.firstName" name="firstName">
+    <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.firstName" required
+    #firstNameNgModel = "ngModel"
+    name="firstName">
+    <div *ngIf="firstNameNgModel.invalid">
+      <p-message severity="error" text="Field is required" styleClass="mr-2"></p-message>  
+    </div>
   </div>
 
   <div class="form-group">
     <label> Last Name </label>
-    <input type="text" class="form-control" id="lastName" [(ngModel)]="employee.lastName" name="lastName">
+    <input type="text" class="form-control" id="lastName" [(ngModel)]="employee.lastName" required
+    #lastNameNgModel = "ngModel"
+    name="lastName">
+    <div *ngIf="lastNameNgModel.invalid">
+      <p-message severity="error" text="Field is required" styleClass="mr-2"></p-message>  
+    </div>
   </div>
 
   <div class="form-group">
@@ -18,7 +28,7 @@
   </div>
 
   <br>
-  <button class="btn btn-success" type="submit">Submit</button>
+  <button [disabled]="firstNameNgModel.invalid" class="btn btn-success" type="submit">Submit</button>
 
 </form>
 </div>
