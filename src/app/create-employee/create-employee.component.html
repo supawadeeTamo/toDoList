@@ -24,11 +24,22 @@
 
   <div class="form-group">
     <label> Email </label>
-    <input type="text" class="form-control" id="email" [(ngModel)]="employee.emailId" name="emailId">
+    <input type="text" class="form-control" id="email" 
+    [(ngModel)]="employee.emailId" 
+    required
+    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+    #emailNgModel = "ngModel"
+    name="emailId">
+    <div *ngIf="emailNgModel.errors?.['pattern']">
+      <p-message severity="error" text="invalid is pattern email " styleClass="mr-2"></p-message>  
+    </div>
+    <div *ngIf="emailNgModel.errors?.['required']">
+      <p-message severity="error" text="Field is required" styleClass="mr-2"></p-message>  
+    </div>
   </div>
 
   <br>
-  <button [disabled]="firstNameNgModel.invalid" class="btn btn-success" type="submit">Submit</button>
+  <button [disabled]="firstNameNgModel.invalid || lastNameNgModel.invalid  " class="btn btn-success" type="submit">Submit</button>
 
 </form>
 </div>
