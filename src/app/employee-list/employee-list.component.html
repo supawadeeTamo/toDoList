@@ -30,6 +30,10 @@
       <td>{{employee.lastName}}</td>
       <td>{{employee.emailId}}</td>
       <td>
+        <button (click)="addEmployee()" class="btn btn-primary">
+          Add
+        </button>
+        &nbsp;
         <button (click)="updateEmployee(employee.id)" class="btn btn-primary">
           Update
         </button>

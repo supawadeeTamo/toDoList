@@ -18,8 +18,9 @@ import { SearchComponentComponent } from './search-component/search-component.co
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateEmployeeFormComponent } from './create-employee-form/create-employee-form.component';
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
     TodosComponent,
     TodoItemComponent,
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CreateEmployeeComponent,
       UpdateEmployeeComponent,
       EmployeeDetailsComponent,
-      SearchComponentComponent
+      SearchComponentComponent,
+      CreateEmployeeFormComponent
    ],
   imports: [
     BrowserModule,

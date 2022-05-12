@@ -3,6 +3,8 @@ import { EmployeeService } from './../employee.service';
 import { Employee } from './../employee';
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { CreateEmployeeFormComponent } from '../create-employee-form/create-employee-form.component';
 
 
 @Component({
@@ -21,7 +23,8 @@ export class EmployeeListComponent implements OnInit {
 
   constructor(
     private employeeService: EmployeeService,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -96,5 +99,18 @@ export class EmployeeListComponent implements OnInit {
     this.filters.keywordLastName = ''
     this.filters.keywordEmail = ''
     this.getEmployees()
+  }
+
+  //create แบบ from component
+  addEmployee(){
+    const dialogRef = this.dialog.open(CreateEmployeeFormComponent, {
+      height: '650px',
+      width: '650px',
+      data: {},
+    })
+
+    dialogRef.afterClosed().subscribe(_res=>{
+      this.getEmployees();
+    })
   }
 }
